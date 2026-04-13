@@ -1,6 +1,6 @@
 # eval-skills
 
-A collection of free Claude skills for developers building with LLMs — built by [Latitude](https://latitude.so).
+A collection of free Claude skills for developers building with LLMs.
 
 Each skill gives you a structured workflow for finding failure patterns, building evals, and validating that your evals actually work.
 
@@ -29,4 +29,4 @@ The skill will be available in Claude Code immediately — no restart needed.
 
 ## About
 
-These skills package the methodology behind [Latitude](https://latitude.so) — an AI observability platform that helps dev teams find, track, and fix what's breaking in their AI before users notice.
+These skills package the methodology behind [Latitude](https://latitude.so) - an AI observability platform that helps dev teams find, track, and fix what's breaking in their AI before users notice.
