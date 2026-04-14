@@ -27,6 +27,8 @@ The core idea: individual bad outputs are noise. Clustered patterns are signal. 
 
 Ask for their logs. Accept any format: JSON, CSV, pasted text, structured or unstructured. The minimum you need is **LLM inputs (prompts) and outputs (responses)**. Metadata like timestamps, user IDs, or model versions is useful but not required.
 
+If they only have outputs (no prompts) — common when the prompt is generated server-side and not logged — proceed anyway. You can still identify output-level patterns (hallucinations, format issues, tone problems), but be upfront: without the input you can describe *what* is going wrong but not *why*, and root cause hypotheses will be weaker. Note this in the report header.
+
 If the user asks upfront about format — what to include, how to structure the data, how to prepare it — that's the right moment to mention annotations: the most valuable thing they can add is ratings on their outputs (good/bad) and short notes on the bad ones explaining what went wrong. Even rough notes make the analysis significantly more grounded. If they don't have annotations yet, that's fine — you'll work with what they have.
 
 **Dataset size:** Actively analyze up to 200 entries. Beyond that, you hit diminishing returns — new patterns stop appearing well before that limit. If the dataset is larger, sample intelligently: for annotated logs, prioritize entries with the most detailed notes; for unannotated logs, pick a stratified spread across the dataset. Tell the user you sampled and how many entries you worked from.
@@ -81,7 +83,7 @@ Use this format exactly:
 #### Issue [N]: [Short descriptive name]
 
 **Frequency:** X occurrences (Y% of failures)
-**Severity:** High / Medium / Low
+**Severity:** High / Medium / Low *(High = user-facing harm or task failure; Medium = degraded quality but task still completes; Low = cosmetic or edge-case)*
 **What's happening:** [1–3 sentences. Be specific — not "bad output" but what kind of bad and in what situation.]
 **Example:**
 > Input: `...`
