@@ -8,13 +8,15 @@ Each skill gives you a structured workflow for finding failure patterns, buildin
 
 | Skill | What it does | Status |
 |---|---|---|
-| [llm-issue-discovery](./llm-issue-discovery/) | Analyze LLM outputs, find failure patterns, get a prioritized issue report | Available |
-| llm-eval-checklist | Check if your evals are actually good | Coming soon |
-| llm-judge-creator | Create an LLM-as-judge based on annotated traces | Coming soon |
-| llm-judge-alignment | Measure how well your LLM judge aligns with human annotations | Coming soon |
-| llm-eval-type-selector | Decide whether to use an LLM judge or a rule-based eval | Coming soon |
-| llm-eval-creator | Build targeted evals from your failure patterns | Coming soon |
-| llm-eval-audit | Audit your existing evals for gaps and quality issues | Coming soon |
+| [llm-issue-discovery](./llm-issue-discovery/) | Find and cluster failure patterns in LLM outputs | Available |
+| llm-judge-creator | Build LLM-as-a-judge prompts from issues or annotations | Coming soon |
+| llm-judge-alignment | Validate how well a judge aligns with human judgment | Coming soon |
+| llm-annotation-guide | Structure a good annotation session for your team | Coming soon |
+| llm-eval-type-selector | Decide whether to use a judge or a rule-based eval | Coming soon |
+| llm-evals-checklist | Pre-build check: are you ready to build good evals? | Coming soon |
+| llm-evals-audit | Post-build check: are your existing evals healthy and well-targeted? | Coming soon |
+| llm-regression-runner | Run a golden dataset against your prompt, get a pass/fail report | Coming soon |
+| ai-agent-pre-launch | Pre-ship checklist: tracing, eval baseline, test suite | Coming soon |
 
 ## Install
 
