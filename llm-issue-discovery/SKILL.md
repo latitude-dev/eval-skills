@@ -48,7 +48,12 @@ Check whether the logs have ratings or notes (good/bad flags, thumbs up/down, fr
 
 **If annotated:** focus on the bad-rated entries and their notes. These are your raw material — a human already identified something wrong. Read the notes carefully before clustering.
 
-**If not annotated:** scan the outputs yourself. Look for:
+**If not annotated:** Let the user know that annotations would make this significantly more reliable:
+> "Your logs don't have ratings or notes on failures. Issue discovery is most accurate when it's grounded in human judgment — knowing which outputs were actually wrong and why. If you have time, running `llm-annotation-guide` first will give you much stronger results here.
+>
+> That said, I can scan the outputs myself and surface candidate patterns — just know these are AI-identified, not human-validated."
+
+If they want to annotate first, stop here and point them to `llm-annotation-guide`. If they want to proceed anyway, scan the outputs yourself. Look for:
 - **Instruction non-compliance** — output ignores explicit instructions in the prompt (wrong format, missing required fields, wrong tone, skipped steps) — the most common failure type
 - **Hallucination markers** — confident claims that look fabricated, invented names/dates/sources, specifics that contradict the input
 - **Irrelevance** — response doesn't address what was asked, or addresses the wrong part of it
