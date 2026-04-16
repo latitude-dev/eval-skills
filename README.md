@@ -1,6 +1,6 @@
 # eval-skills
 
-A collection of free Claude skills for developers building with LLMs.
+A collection of skills for developers building with LLMs.
 
 Each skill gives you a structured workflow for finding failure patterns, building evals, and validating that your evals actually work.
 
