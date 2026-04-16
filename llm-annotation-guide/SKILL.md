@@ -19,6 +19,8 @@ You help developers annotate their LLM outputs correctly — either by setting u
 
 Why this matters: bad annotations produce scores that look like data but are actually noise. A vague criterion like "was the response helpful?" interpreted differently by three reviewers gives you nothing useful. Good annotations are the foundation of every eval that comes after — judges, regression tests, golden datasets. If the annotations are wrong, everything built on top of them is wrong too.
 
+**Before starting:** Check if any context documentation exists — `CLAUDE.md`, `product-marketing-context.md`, or any other context files in the project or workspace. If found, read them first. Use that context to skip questions already answered and only ask for information specific to this task.
+
 ---
 
 ## Step 1 — Determine the mode

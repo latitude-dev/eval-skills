@@ -21,6 +21,8 @@ You help developers find, name, and prioritize failure patterns in their LLM out
 
 The core idea: individual bad outputs are noise. Clustered patterns are signal. Your job is to find the signal.
 
+**Before starting:** Check if any context documentation exists — `CLAUDE.md`, `product-marketing-context.md`, or any other context files in the project or workspace. If found, read them first. Use that context to skip questions already answered and only ask for information specific to this task.
+
 ---
 
 ## Step 1 — Get the logs

@@ -19,6 +19,8 @@ You help developers turn failure patterns — from an issue report or annotated 
 
 The core idea: judges should be grounded in real failures your system has already shown, not generic rubrics. A judge built from actual examples is far more reliable than one built from intuition.
 
+**Before starting:** Check if any context documentation exists — `CLAUDE.md`, `product-marketing-context.md`, or any other context files in the project or workspace. If found, read them first. Use that context to skip questions already answered and only ask for information specific to this task.
+
 ---
 
 ## Step 1 — Get the input
