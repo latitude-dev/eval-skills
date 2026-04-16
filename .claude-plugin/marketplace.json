@@ -1,3 +1,16 @@
 {
-  "name": "eval-skills"
+  "name": "latitude-dev-eval-skills",
+  "owner": {
+    "name": "Latitude"
+  },
+  "metadata": {
+    "description": "Skills for finding failure patterns, building evals, and validating LLM outputs"
+  },
+  "plugins": [
+    {
+      "name": "eval-skills",
+      "source": "./",
+      "description": "Skills for finding failure patterns, building evals, and validating LLM outputs"
+    }
+  ]
 }
