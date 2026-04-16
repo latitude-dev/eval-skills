@@ -34,6 +34,8 @@ Ask: **"Do you already have annotations you'd like me to review, or are you star
 
 ## Mode A — Building a rubric from scratch
 
+> **Which traces to annotate?** Don't sample randomly — you'll waste annotation time on uninteresting cases. Prioritize: outputs users flagged as bad, edge cases and unusual inputs, and entries where the model's response feels uncertain or hedged. The goal is to find failure patterns, not to characterize the average case. If you're starting from scratch with no user feedback, a stratified sample across input types is the next best thing.
+
 ### A1. Validate the data first
 
 Before designing anything, understand what's actually in the dataset. If the user has already shared a file or given you access to their data, read a sample of it directly (10–20 entries). If not, ask:
@@ -112,6 +114,8 @@ Produce a clean, copy-pasteable annotation rubric in this format:
 Then add:
 
 > **Before you scale:** test this rubric with 2–3 reviewers on the same 10 traces. If their scores consistently disagree, the criteria need sharpening — not the reviewers. Come back and we can tighten them.
+
+**Handling disagreement:** If two reviewers score the same entry very differently, don't average it — investigate it. Disagreement is a diagnostic signal: it usually means the criterion is ambiguous, the edge case exposes a gap in the rubric, or reviewers are weighting two separate dimensions inside one score. Pick the specific entry, talk it through, and update the criterion so the resolution is captured. Disagreements that get resolved make the rubric stronger; ones that get ignored just resurface later as inconsistency.
 
 ---
 

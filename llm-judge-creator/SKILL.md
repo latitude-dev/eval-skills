@@ -149,6 +149,8 @@ After all judges, add:
 > **Model recommendation:** Use a capable model different from the one you're evaluating — avoid self-scoring bias. If your agent runs on GPT-4o-mini, use Claude 3.5 Sonnet or similar as your judge. If your agent runs on Claude, use a GPT-4 class model.
 >
 > **Next step:** These judges are a starting point. Before relying on their scores, validate them against a sample of human-labeled examples to check that the scores actually align with your team's judgment. The `llm-judge-alignment` skill walks you through this.
+>
+> **Ongoing calibration:** Judges drift. As your underlying model updates, your prompts evolve, or user behavior shifts, a judge that was accurate at launch can quietly become miscalibrated. Re-validate every 4–6 weeks — or after any significant prompt change — by checking a fresh sample of human-labeled examples against the judge's scores. If alignment drops, revisit the criteria and examples in the judge prompt before trusting its output again.
 
 If they came in with annotated traces (no prior issue discovery), also add:
 
