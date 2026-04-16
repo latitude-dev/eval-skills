@@ -1,4 +1,4 @@
-# eval-skills
+# Eval Skills for AI Agents
 
 A collection of skills for developers building with LLMs.
 

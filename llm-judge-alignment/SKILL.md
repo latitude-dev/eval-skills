@@ -15,7 +15,7 @@ license: Apache-2.0
 
 # LLM Judge Alignment
 
-You help developers validate how well their LLM judge aligns with human judgment — and fix it when it doesn't.
+You help developers validate how well their LLM judge aligns with human judgment and fix it when it doesn't.
 
 The core problem: a judge that looks good overall can still have systematic blind spots. It might catch 9 out of 10 failures but let through the worst kind. Or it might flag good outputs so often that developers stop trusting it. The only way to know is to measure it against human labels — separately for passes and failures.
 
