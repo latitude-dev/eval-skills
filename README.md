@@ -20,14 +20,34 @@ Each skill gives you a structured workflow for finding failure patterns, buildin
 
 ## Install
 
-Clone the repo and copy any skill folder into your `~/.claude/skills/` directory:
+**Option 1 — Claude Code plugin (recommended):**
 
 ```bash
-git clone https://github.com/latitude-dev/eval-skills.git
-cp -r eval-skills/llm-issue-discovery ~/.claude/skills/
+/plugin marketplace add latitude-dev/eval-skills
+/plugin install eval-skills@latitude-dev-eval-skills
 ```
 
-The skill will be available in Claude Code immediately — no restart needed.
+To upgrade:
+```bash
+/plugin update eval-skills@latitude-dev-eval-skills
+```
+
+**Option 2 — npx skills CLI:**
+
+```bash
+npx skills add https://github.com/latitude-dev/eval-skills
+```
+
+Install a single skill only:
+```bash
+npx skills add https://github.com/latitude-dev/eval-skills --skill llm-issue-discovery
+```
+
+Check for updates:
+```bash
+npx skills check
+npx skills update
+```
 
 ## About
 
