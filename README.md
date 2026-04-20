@@ -8,10 +8,10 @@ Each skill gives you a structured workflow for finding failure patterns, buildin
 
 | Skill | What it does | Status |
 |---|---|---|
-| [llm-issue-discovery](./llm-issue-discovery/) | Find and cluster failure patterns in LLM outputs | Available |
-| [llm-annotation-guide](./llm-annotation-guide/) | Build an annotation rubric or review existing annotations for quality | Available |
-| [llm-judge-creator](./llm-judge-creator/) | Build LLM-as-a-judge prompts from issues or annotations | Available |
-| [llm-judge-alignment](./llm-judge-alignment/) | Validate how well a judge aligns with human judgment | Available |
+| [llm-issue-discovery](./skills/llm-issue-discovery/) | Find and cluster failure patterns in LLM outputs | Available |
+| [llm-annotation-guide](./skills/llm-annotation-guide/) | Build an annotation rubric or review existing annotations for quality | Available |
+| [llm-judge-creator](./skills/llm-judge-creator/) | Build LLM-as-a-judge prompts from issues or annotations | Available |
+| [llm-judge-alignment](./skills/llm-judge-alignment/) | Validate how well a judge aligns with human judgment | Available |
 | llm-eval-type-selector | Decide whether to use a judge or a rule-based eval | Coming soon |
 | llm-evals-checklist | Pre-build check: are you ready to build good evals? | Coming soon |
 | llm-evals-audit | Post-build check: are your existing evals healthy and well-targeted? | Coming soon |
