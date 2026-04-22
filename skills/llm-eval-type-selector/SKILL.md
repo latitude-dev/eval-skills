@@ -97,44 +97,41 @@ If both apply → **composite eval** (rule first, then judge).
 
 ## Step 3 — Output the recommendation
 
-Produce a recommendation for each failure mode or dimension. Use this format:
+For each failure mode, output a self-contained block using the exact format below — one block per issue. The goal is that a developer reads it and immediately knows what to build and how to build it.
 
 ---
 
-### Eval type recommendation
+### [Issue name]
 
-| Failure mode / dimension | Recommended type | Rationale |
-|---|---|---|
-| [Name] | Programmatic rule | [One line: what the rule checks and why a rule is sufficient] |
-| [Name] | LLM-as-judge | [One line: what requires language understanding here] |
-| [Name] | Composite | [One line: structural check first, then semantic check] |
+**Eval type:** [Programmatic rule / LLM-as-judge / Composite]
+
+**What to build:** [One sentence naming the concrete artifact — e.g., "A regex check on the output", "An LLM judge prompt", "A regex check followed by an LLM judge prompt for flagged outputs"]
+
+**[For programmatic rules — use this section:]**
+
+**Check:** [Plain-language description of the condition — e.g., "Does the response contain an internal order ID (format: ORD-XXXXXX)? If yes → fail."]
+
+**Implementation:** [Concrete code or pseudocode — e.g., `re.search(r'ORD-\d{6}', output)` → fail if match found]
+
+**[For LLM-as-judge — use this section:]**
+
+**Dimension:** [Short name for what the judge measures — e.g., "Guardrail compliance", "Recommendation relevance"]
+
+**Judge brief:** [2–3 sentences that could be dropped directly into a judge prompt. What does pass look like? What does fail look like? Ground it in the actual failure, not generic language.]
+
+**Scoring:** [Binary (pass/fail) — use when the guardrail either held or it didn't. 1–5 scale — use when there are meaningful degrees of quality.]
+
+**Next step for this issue:** Take the judge brief above to `llm-judge-creator` to build the full judge prompt.
+
+**[For composite — use both sections above, then add:]**
+
+**Run order:** Rule first. If the rule finds no match, stop — output passes. If the rule flags the output, run the judge on it.
 
 ---
 
-For each item, also provide a short implementation note:
+Repeat the block for every issue. After all blocks, add:
 
-**For programmatic rules:**
-> What to check: [concrete condition — e.g., "response must be valid JSON with fields `title`, `price`, `available`"]
-> How to implement: [one-line approach — e.g., "parse with JSON.parse(), validate required keys, fail if any missing"]
-
-**For LLM-as-judge:**
-> Dimension to judge: [name — e.g., "recommendation relevance"]
-> What the judge should assess: [1–2 sentences grounded in the actual failure, not generic language]
-> Scoring approach: binary (pass/fail) if the quality is clear-cut; 1–5 scale if there are meaningful degrees
-
-**For composite:**
-> Rule component: [what the rule checks]
-> Judge component: [what the judge assesses]
-> Order: always run the rule first — if it fails, skip the judge
-
----
-
-After the recommendation, always end with:
-
-> **Next step:**
-> - To build the LLM-as-judge prompts, use `llm-judge-creator` — it takes your issue report and produces ready-to-use judge prompts grounded in your actual failures.
-> - To validate that your judges actually agree with human judgment before relying on their scores, use `llm-judge-alignment`.
-> - If you're not sure your failure modes are well-defined yet: annotate your logs first (`llm-annotation-guide`), then find patterns (`llm-issue-discovery`). Human judgment is what grounds the whole process.
+> **Overall next step:** For any issues marked LLM-as-judge or Composite, take the judge briefs to `llm-judge-creator` to build the full prompts. Once built, use `llm-judge-alignment` to validate them against human-labeled examples before trusting the scores in production.
 
 ---
 
@@ -146,7 +143,7 @@ After the recommendation, always end with:
 
 **Don't use a judge where a rule will do.** Rules are faster, cheaper, and perfectly consistent. Every judge call costs money and introduces a potential error. If you can encode the check as code, do it.
 
-**Rules can't measure meaning.** A rule that checks for the word "empathetic" in a response is not measuring empathy. If you find yourself writing rules as proxies for quality, you probably need a judge.
+**Rules can't measure meaning or behaviour.** A rule that checks for the word "empathetic" in a response is not measuring empathy. If you find yourself writing rules as proxies for quality, you probably need a judge.
 
 **Separate dimensions, separate evals.** Don't build one judge that tries to measure tone, factual accuracy, and completeness simultaneously — it'll be unreliable on all three. One dimension per eval, whether rule or judge.
 
