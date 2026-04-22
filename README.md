@@ -27,7 +27,7 @@ You don't have to follow this order strictly — if you already have annotated l
 | [llm-eval-type-selector](./skills/llm-eval-type-selector/) | Decide whether to use a judge or a rule-based eval | Available |
 | [llm-judge-creator](./skills/llm-judge-creator/) | Build LLM-as-a-judge prompts from issues or annotations | Available |
 | [llm-judge-alignment](./skills/llm-judge-alignment/) | Validate how well a judge aligns with human judgment | Available |
-| llm-evals-checklist | Pre-build check: are you ready to build good evals? | Coming soon |
+| [llm-evals-checklist](./skills/llm-evals-checklist/) | Pre-build check: are you ready to build good evals? | Available |
 | llm-evals-audit | Post-build check: are your existing evals healthy and well-targeted? | Coming soon |
 | llm-regression-runner | Run a golden dataset against your prompt, get a pass/fail report | Coming soon |
 | ai-agent-pre-launch | Pre-ship checklist: tracing, eval baseline, test suite | Coming soon |
