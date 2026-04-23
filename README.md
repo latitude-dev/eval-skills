@@ -30,7 +30,7 @@ You don't have to follow this order strictly — if you already have annotated l
 | [llm-evals-checklist](./skills/llm-evals-checklist/) | Pre-build check: are you ready to build good evals? | Available |
 | [llm-evals-audit](./skills/llm-evals-audit/) | Post-build check: are your existing evals healthy and well-targeted? | Available |
 | [llm-regression-runner](./skills/llm-regression-runner/) | Run a golden dataset against your prompt, get a pass/fail report | Available |
-| ai-agent-pre-launch | Pre-ship checklist: tracing, eval baseline, test suite | Coming soon |
+
 
 ## Install
 
