@@ -10,7 +10,7 @@ description: >
   Two modes: (1) starting from scratch — helps define criteria and build a rubric before annotating;
   (2) already annotated — reviews existing annotations for vague criteria, missing reasoning,
   and inconsistency, then helps fix them.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Annotation Guide

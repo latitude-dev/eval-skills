@@ -8,7 +8,7 @@ description: >
   "run offline evals", "what changed after my prompt update", "eval before deploying".
   Runs a golden dataset against the current prompt, scores each case with available judges,
   compares results against a saved baseline, and produces a pass/fail report with a clear deploy recommendation.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Regression Runner

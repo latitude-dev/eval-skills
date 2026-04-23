@@ -12,7 +12,7 @@ description: >
   If it's unclear whether the problem is in AI outputs or in code/config, ask: "Are you seeing unexpected
   outputs from your model, or is this a code or configuration issue?"
   Takes a dev from a pile of raw LLM outputs to a structured, prioritized list of named failure patterns they can actually act on.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Issue Discovery

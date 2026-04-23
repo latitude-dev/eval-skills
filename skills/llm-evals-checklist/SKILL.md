@@ -9,7 +9,7 @@ description: >
   Runs a readiness check across four prerequisites — tracing, logs, annotations, issues — before a developer
   invests time in building evaluations. Checks the codebase and project files first; only asks the developer
   when it cannot determine the answer itself.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Evals Checklist

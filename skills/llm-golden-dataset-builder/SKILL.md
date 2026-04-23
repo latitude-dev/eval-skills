@@ -8,7 +8,7 @@ description: >
   "select good examples for testing", "create a baseline dataset", "curate passing traces".
   Takes production logs with eval results and helps the developer select, review, and curate
   representative examples into a structured golden dataset ready for regression testing.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Golden Dataset Builder

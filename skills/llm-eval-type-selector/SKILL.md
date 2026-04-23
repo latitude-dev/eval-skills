@@ -9,7 +9,7 @@ description: >
   "how should I evaluate my AI automatically", "what kind of eval fits this issue".
   Takes one or more failure modes or quality dimensions and returns a concrete type recommendation —
   programmatic rule, LLM-as-judge, or composite — with rationale and a suggested implementation path.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Eval Type Selector

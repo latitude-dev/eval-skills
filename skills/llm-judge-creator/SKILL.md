@@ -10,7 +10,7 @@ description: >
   Takes an issue report (from llm-issue-discovery) or annotated traces and produces
   ready-to-use LLM-as-a-judge prompts — one per evaluation dimension — that the dev can
   copy-paste into their eval setup.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Judge Creator

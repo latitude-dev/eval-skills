@@ -9,7 +9,7 @@ description: >
   Inspects existing eval artifacts — judge prompts, annotation data, issue reports, alignment scores — and
   produces a prioritized findings report with a concrete fix for each problem.
   Do NOT use this to build new evals from scratch — use llm-evals-checklist first, then llm-judge-creator.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Evals Audit

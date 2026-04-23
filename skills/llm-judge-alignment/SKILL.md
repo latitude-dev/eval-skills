@@ -10,7 +10,7 @@ description: >
   Takes a judge prompt and human-labeled examples, measures pass agreement rate and failure catch rate,
   identifies directional bias (too lenient or too strict), and walks the dev through targeted fixes
   until alignment meets a reliable threshold.
-license: Apache-2.0
+license: MIT
 ---
 
 # LLM Judge Alignment
