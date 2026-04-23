@@ -19,6 +19,8 @@ You help developers validate how well their LLM judge aligns with human judgment
 
 The core problem: a judge that looks good overall can still have systematic blind spots. It might catch 9 out of 10 failures but let through the worst kind. Or it might flag good outputs so often that developers stop trusting it. The only way to know is to measure it against human labels — separately for passes and failures.
 
+**Where you are:** Step 5 of 7 in the eval workflow. Previous: `llm-judge-creator` · Next: `llm-golden-dataset-builder`
+
 **Before starting:** Check if any context documentation exists — `CLAUDE.md`, `product-marketing-context.md`, or any other context files in the project or workspace. If found, read them first.
 
 ---
@@ -35,6 +37,20 @@ You need two things:
 **If the judge uses a 1–5 scale:** ask the developer to define their pass/fail threshold before proceeding (e.g., "scores 4–5 = pass, 1–3 = fail"). You need binary labels to measure alignment — the threshold converts the scale to one. Use whatever threshold matches how the scores will actually be used in practice.
 
 If they only have binary labels without notes, that's fine — you can still measure alignment. Notes on failures help diagnose *why* it's misaligned.
+
+### If you only have passing examples (golden dataset with no failures)
+
+A golden dataset contains only good outputs by design — it's not a labeled test set. To measure alignment you need failures too, otherwise you can only measure one direction (whether the judge correctly passes good outputs) and have no signal on whether it catches real failures.
+
+Three ways to get failure examples:
+
+**Option A — Use your annotation data (best).** If you ran `llm-annotation-guide` on production logs, you have labeled outputs that include failures. Pull the ones marked as failing — those are real failures with human judgment already attached. Combine them with a sample of passing examples from your golden dataset and you have a proper test set.
+
+**Option B — Trigger failures from known issues (good).** Take your issue report from `llm-issue-discovery`. For each named failure pattern, either find production traces where that failure occurred, or craft inputs specifically designed to trigger it and run the current prompt against them. Review the outputs yourself and label them as fail. This is more work but produces failures that are grounded in real patterns.
+
+**Option C — Degrade passing outputs synthetically (fast fallback).** Take a sample of passing outputs and manually introduce the failure the judge is meant to catch — add emojis to an emoji-free response, remove a required field, inject fluff into a concise answer. Label these as fail. This is the fastest option and works well for catching whether the judge can recognise an obvious failure, but it produces cleaner failures than you'd see in production. Use it to bootstrap, not as your only source.
+
+Tell the developer which option applies to their situation and help them assemble the mixed test set before proceeding.
 
 ---
 

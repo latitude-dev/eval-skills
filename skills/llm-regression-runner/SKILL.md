@@ -17,6 +17,8 @@ You run a developer's golden dataset against their current prompt, score each ca
 
 This is offline evaluation: the gate before a prompt change reaches production. Every time a developer changes a prompt, swaps a model, or adjusts system instructions, this skill answers the question — did quality improve, hold steady, or get worse?
 
+**Where you are:** Step 7 of 7 in the eval workflow. Previous: `llm-golden-dataset-builder` · This is the final step — run before every prompt change.
+
 **This skill runs as a code agent.** Search the codebase and project files for all required artifacts before asking the developer for anything.
 
 ---

@@ -24,6 +24,8 @@ There are three types of automated eval. Each one is good at something the other
 
 Picking the wrong type is expensive: a rule can't catch what a judge catches, and a judge is overkill (and slower) where a rule would do. This skill makes that decision explicit before you build anything.
 
+**Where you are:** Step 3 of 7 in the eval workflow. Previous: `llm-issue-discovery` · Next: `llm-judge-creator`
+
 **Before starting:** Check if any context documentation exists — `CLAUDE.md`, `product-marketing-context.md`, or any other context files in the project or workspace. If found, read them first. Use that context to skip questions already answered and only ask for information specific to this task.
 
 ---

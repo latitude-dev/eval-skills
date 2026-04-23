@@ -18,6 +18,8 @@ You inspect an existing eval setup and surface problems that make evals untrustw
 
 The most common situation this skill addresses: evals are passing, scores look fine, but the product still feels broken. Usually this means the evals are measuring the wrong things, or the judges haven't been validated against real human judgment.
 
+**Where you are:** Meta-skill — run at any point to check whether existing evals are healthy and well-targeted. Most useful after building evals for the first time, or when eval scores look fine but the product still feels broken.
+
 **This skill runs as a code agent.** For each diagnostic check, look for the relevant artifacts in the codebase and project files first. Only ask the developer when you genuinely cannot determine the answer from what's available.
 
 ---

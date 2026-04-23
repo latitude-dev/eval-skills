@@ -17,6 +17,8 @@ You help developers build a golden dataset from their production logs — a cura
 
 A golden dataset is not just a collection of passing outputs. It's a deliberate selection that covers the real range of what users ask and what good responses look like — common cases, edge cases, and fixed failure patterns. The goal is to have examples where, if the prompt ever stopped handling them correctly, you'd want to know immediately.
 
+**Where you are:** Step 6 of 7 in the eval workflow. Previous: `llm-judge-alignment` · Next: `llm-regression-runner`
+
 **This skill runs as a code agent.** Search the codebase and project files for logs, traces, and eval results before asking the developer for anything.
 
 ---

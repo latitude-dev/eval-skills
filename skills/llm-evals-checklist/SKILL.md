@@ -25,6 +25,8 @@ There are four prerequisites. Each one depends on the previous:
 
 You're ready to build evals when all four are in place. If any are missing, the checklist tells you what to do first.
 
+**Where you are:** Meta-skill — run before starting the workflow to confirm you have the right foundation (tracing, logs, annotations, issues). If anything is missing, it tells you what to fix first.
+
 **This skill is running as a code agent.** Before asking the developer anything, check the codebase and project files. Look for evidence of each prerequisite. Only ask when you genuinely can't determine the answer from what's available.
 
 ---
