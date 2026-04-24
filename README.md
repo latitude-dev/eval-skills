@@ -26,17 +26,17 @@ You don't have to follow this order strictly — if you already have annotated l
 
 ## Skills
 
-| Skill | What it does | Status |
-|---|---|---|
-| [llm-annotation-guide](./skills/llm-annotation-guide/) | Build an annotation rubric or review existing annotations for quality | Available |
-| [llm-issue-discovery](./skills/llm-issue-discovery/) | Find and cluster failure patterns in LLM outputs | Available |
-| [llm-eval-type-selector](./skills/llm-eval-type-selector/) | Decide whether to use a judge or a rule-based eval | Available |
-| [llm-judge-creator](./skills/llm-judge-creator/) | Build LLM-as-a-judge prompts from issues or annotations | Available |
-| [llm-judge-alignment](./skills/llm-judge-alignment/) | Validate how well a judge aligns with human judgment | Available |
-| [llm-evals-checklist](./skills/llm-evals-checklist/) | Pre-build check: are you ready to build good evals? | Available |
-| [llm-evals-audit](./skills/llm-evals-audit/) | Post-build check: are your existing evals healthy and well-targeted? | Available |
-| [llm-golden-dataset-builder](./skills/llm-golden-dataset-builder/) | Curate passing traces into a golden dataset for regression testing | Available |
-| [llm-regression-runner](./skills/llm-regression-runner/) | Run a golden dataset against your prompt, get a pass/fail report | Available |
+| Skill | What it does |
+|---|---|
+| [llm-annotation-guide](./skills/llm-annotation-guide/) | Build an annotation rubric or review existing annotations for quality |
+| [llm-issue-discovery](./skills/llm-issue-discovery/) | Find and cluster failure patterns in LLM outputs |
+| [llm-eval-type-selector](./skills/llm-eval-type-selector/) | Decide whether to use a judge or a rule-based eval |
+| [llm-judge-creator](./skills/llm-judge-creator/) | Build LLM-as-a-judge prompts from issues or annotations |
+| [llm-judge-alignment](./skills/llm-judge-alignment/) | Validate how well a judge aligns with human judgment |
+| [llm-evals-checklist](./skills/llm-evals-checklist/) | Pre-build check: are you ready to build good evals? |
+| [llm-evals-audit](./skills/llm-evals-audit/) | Post-build check: are your existing evals healthy and well-targeted? |
+| [llm-golden-dataset-builder](./skills/llm-golden-dataset-builder/) | Curate passing traces into a golden dataset for regression testing |
+| [llm-regression-runner](./skills/llm-regression-runner/) | Run a golden dataset against your prompt, get a pass/fail report |
 
 
 ## Install
